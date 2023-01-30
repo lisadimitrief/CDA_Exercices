@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+@font-face {
+    font-family: 'mirage';
+    src: url('police/Mirage/ final.ttf') format('truetype');
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+header
+{
+    height: 250px;
+    width: 100%;
+    background: rgb(255,0,250);
+    background: linear-gradient(90deg, rgba(255,0,250,1) 0%, rgba(255,0,0,1) 50%, rgba(250,255,0,1) 100%);    
+}
+.title
+{
+    display: table-cell;
+    width: 100vw;
+    height: 250px;
+    vertical-align: middle;
+}
+header h1
+{
+    color: #f1f1f1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+section
+{
+    background: rgb(184,184,184);
+    background: linear-gradient(90deg, rgba(184,184,184,1) 0%, rgba(255,255,255,1) 50%, rgba(180,180,180,1) 100%);
+}
+.contentBox
+{
+    padding-top: 20px;
+    width: 100%;
+}
+.contentBox h2, .contentBox p
+{
+    margin-left: 20px;
+}
+.contentBox h3
+{
+    margin-left: 50px;
+}
+.container
+{
+    height: 100px;
+    width: 250px;
+    border: solid 1px #000;
+    margin: auto;
+    background: rgb(255,0,250);
+    background: linear-gradient(90deg, rgba(255,0,250,1) 0%, rgba(255,0,0,1) 50%, rgba(250,255,0,1) 100%);
+    color: #c7c7c7;
+}
+.box
+{
+    height: 20px;
+    width: 20px;
+    background: radial-gradient(circle, rgba(163,0,140,1) 0%, rgba(255,0,219,1) 0%, rgba(163,0,140,1) 100%);
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 6px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.ex1
+{
+    display: flex;
+}
+.ex2
+{
+    display: flex;
+    align-items: center;
+}
+.ex2a
+{
+    display: flex;
+    align-items: flex-start;
+}
+.ex2b
+{
+    display: flex;
+    align-items: flex-end;
+}
+.ex2c
+{
+    display: flex;
+    align-items: space-around;
+}
+.ex2d
+{
+    display: flex;
+    align-items: space-between;
+}
+.ex2e
+{
+    display: flex;
+    align-items: space-evenly;
+}
+.ex3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ex3a
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ex3b
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.ex3c
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ex3d
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ex3e
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ex4
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ex4a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.ex4b
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+.ex4c
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.ex5
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+#a
+{
+    position:fixed;
+}
+#a:checked ~ header, 
+#a:checked ~ section .contentBox .container
+{
+    background: linear-gradient(90deg, rgba(20,41,250,1) 0%, rgba(0,246,255,1) 50%, rgba(44,255,0,1) 100%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#a:checked ~ section .contentBox .container .box
+{
+    background: radial-gradient(circle, rgba(241,255,0,1) 30%, rgba(44,255,0,1) 100%);
+    color: rgb(9, 110, 0);
+    border: 1px green solid ;
+}
