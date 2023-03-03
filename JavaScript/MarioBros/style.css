@@ -1,0 +1,25 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.result
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card
+{
+    border: solid 1px black;
+    border-radius: 65/15px;
+    padding: 5px;
+    background: rgb(0,22,255);
+background: linear-gradient(325deg, rgba(0,22,255,1) 0%, rgba(255,0,0,1) 100%);
+}
