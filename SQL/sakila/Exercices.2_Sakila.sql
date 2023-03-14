@@ -17,6 +17,20 @@ order by apparition */
 group by title
 order by nbrActeur */
 
+-- Calculer la somme totale dépensé par chaque client et afficher son nom, prénom et adresse complète 
+-- SELECT concat(customer.first_name,' ',customer.last_name) as identite, sum(amount) as depense, address.address FROM payment JOIN customer using(customer_id) JOIN address using(address_id) group by address.address, identite
+
+
+
+-- Pour connaître les acteurs qui ont joué dans au moins un film
+-- SELECT concat(first_name,' ',last_name) as identite FROM actor JOIN film_actor using(actor_id) JOIN film using(film_id) group by identite having count(film_id)>1
+
+-- Trouver qui a loué un film en particulier. (FACTORY DRAGON)
+/*SELECT concat(first_name,' ',last_name) as identite FROM customer JOIN rental using(customer_id)
+																    JOIN inventory using(inventory_id)
+                                                                    JOIN film using(film_id)
+
+
 -- Ce qu’a dépensé chaque client en concaténant les noms et prénoms des clients
 -- SELECT concat(customer.first_name,' ',customer.last_name) as identite, sum(amount) as depense FROM payment JOIN customer using(customer_id) group by identite
 
