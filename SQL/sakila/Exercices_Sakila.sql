@@ -29,7 +29,7 @@
 -- SELECT last_name, count(last_name) as nbrPersonne FROM actor group by last_name
 
 -- Donner l’actor_id pour une actrice ou un acteur choisi
--- SELECT actor_id FROM actor WHERE first_name="" AND last_name=""
+-- SELECT actor_id FROM actor WHERE first_name="KARL" AND last_name="BERRY"
 
 -- //Jointure actor et film_actor:
 -- Trouver tous les films_id pour une actrice ou un acteur choisi
