@@ -4,6 +4,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+body
+{
+    background: url(img/fond.webp);
+}
+#carrousel
+{
+    width: 800px;
+    height: 400px;
+    border: solid 4px #FFF;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+#container
+{
+    width: 800px;
+    height: 400px;
+}
+.bouton
+{
+    position: absolute;
+    width: 70px;
+    cursor: pointer;
+    top: 145px;
+}
+#g
+{
+    left:0;
+    opacity: 1;
+    transform:rotate(270deg);
+    transition: all 0.2s ease;
+}
+#d
+{
+    right:0;
+    opacity: 1;
+    transform:rotate(90deg);
+    transition: all 0.2s ease;
+}
+#g:hover
+{
+    transform: rotate(270deg) scale(1.1);
+    transition: all 0.2s ease;
+}
+#d:hover
+{
+    transform: rotate(90deg) scale(1.1);
+    transition: all 0.2s ease;
+}
+.card
+{
+    border: solid 1px black;
+    border-radius: 65/15px;
+    box-shadow: 5px 5px 5px white;
+    padding: 5px;
+}
+.test
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: pink;
+}
 
 .result
 {
@@ -13,13 +75,4 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-}
-
-.card
-{
-    border: solid 1px black;
-    border-radius: 65/15px;
-    padding: 5px;
-    background: rgb(0,22,255);
-background: linear-gradient(325deg, rgba(0,22,255,1) 0%, rgba(255,0,0,1) 100%);
 }
