@@ -1,0 +1,15 @@
+.append() => ajoute
+.innerHtml => remplace
+.innerText =>remplace sans traduire du code html
+
+boucle for :
+let tableau = ["A", "B", "C"];
+
+for(il y a ça; tant que; fais)
+for(il y a i=0; tant que i<tableau.length; alors fais i++)
+for(i=0; i<tableau.length; i++)
+
+for(const of objet)
+->for(const element of tableau)
+for in => donne l'index (0)
+for of => donne la valeur (A)
