@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: yellow;
+}
+.dark{
+    background: rgb(5, 5, 66);
+}
+/*
+header, section{
+    border: rgb(0,255,201) 2px double;
+    background: yellow;
+}
+header{
+    height: 10em;
+}
+a:visited, a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
+section{
+    height: 50em;;
+} */

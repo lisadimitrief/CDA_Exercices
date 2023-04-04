@@ -39,25 +39,6 @@ result.innerHTML= Object.values(maCollection).map((marioBros)=>
     <input type="button" id="btn" value="Description">
     </div>`);
 
-let currentindex = 0
-function popu(currentindex) {
-    let descr = document.createElement("div")
-    let titreDesc = document.createElement("h3")
-    let description = document.createElement("p")
-    description = document.createAttribute("class='description'")
-    let btn = document.getElementById("btn")
-}
-// document.getElementById("btn").addEventListener("click", popu());
-// let popu = document.getElementById("popu")
-// function popu() {
-//     popu.innerHTML= Object.values(maCollection).map((marioBros)=>
-//     `<div class="test">
-//     <h2>Titre : ${marioBros.titre}</h2>
-//     <p>Descritpion :${marioBros.description}</p>
-//     </div>`);}
-
-
-
 
 
 
