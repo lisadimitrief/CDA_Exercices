@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Mon Application TodoList</h1>
+        <nav>
+            <ul>
+                <li><a href="/" disabled>Accueil</a></li>
+                <li><a href="/a_propos">A propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <form action="">
+            <label for="Title">Titre</label>
+            <input type="text" id="Title" name="Title"><br>
+            <label for="description">Description de la Tâche</label><br>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea><br>
+            <input type="submit" value="Enregistrer">
+        </form>
+        <p>----------------------------------------------------------------------------</p>
+    </section>
+    <section>
+        <h2>Liste des tâches :</h2>
+        <ul>
+            <% for(i=0; i<data.length; i++){ %>
+            <li><%= data[i].titre +" : "+data[i].description %></li>
+            <% } %>
+        </ul>
+    </section>
+</body>
+</html>
