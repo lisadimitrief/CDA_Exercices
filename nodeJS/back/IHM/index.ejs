@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
     <title>Document</title>
 </head>
 <body>
@@ -16,10 +17,20 @@
             </ul>
         </nav>
     </header>
+    <div id="popup" class="overlay">
+        <div id="popupu">
+            <p>
+                Etes-vous sûr de vouloir supprimer ?
+            </p>
+            <input type="button" value="OUI" onclick="open()">
+            <input type="button" value="Annuler" onclick="close()">
+        </div>
+    </div>
     <section>
-        <form action="">
-            <label for="Title">Titre</label>
-            <input type="text" id="Title" name="Title"><br>
+        <form action="/liste" method="post">
+            <input type="hidden" name="id" id="id">
+            <label for="title">Titre</label>
+            <input type="text" id="title" name="title"><br>
             <label for="description">Description de la Tâche</label><br>
             <textarea name="description" id="description" cols="30" rows="10"></textarea><br>
             <input type="submit" value="Enregistrer">
@@ -31,8 +42,33 @@
         <ul>
             <% for(i=0; i<data.length; i++){ %>
             <li><%= data[i].titre +" : "+data[i].description %></li>
+            <input type="button" value="supp'" onclick="deleteData('<%= data[i].id %>')">
+            <input type="button" value="modif'" onclick='putData("<%= data[i].id %>", "<%= data[i].titre %>", "<%= data[i].description %>")'>
+            <!-- j'ai eu une erreur j'ai du echanger les " et les '. -->
             <% } %>
         </ul>
     </section>
 </body>
+<script>
+    function putData(id, title, description) {
+        document.getElementById("id").value = id;
+        document.getElementById("title").value = title;
+        document.getElementById("description").value = description;
+    }
+    function deleteData(id) {
+        document.getElementById("id").value = id;
+        let endPoint = "liste/"+ id;
+        fetch(endPoint, {method : "delete"})
+        .then((response)=>response.json())
+        .then(data => window.location.href = data.routeRacine)
+        .catch(error =>console.error(error));
+    }
+    function open() {
+        let popup = document.getElementById('popup').style.diplay = "block";
+    }
+    function close() {
+        // let popup = document.getElementById('popup').style.diplay = "none";
+        console.log('ok');
+    }
+</script>
 </html>
