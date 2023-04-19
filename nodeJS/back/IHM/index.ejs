@@ -17,13 +17,13 @@
             </ul>
         </nav>
     </header>
-    <div id="popup" class="overlay">
+    <div id="popup" style="display: none;" class="overlay">
         <div id="popupu">
             <p>
                 Etes-vous sûr de vouloir supprimer ?
             </p>
-            <input type="button" value="OUI" onclick="open()">
-            <input type="button" value="Annuler" onclick="close()">
+            <input type="button" value="OUI" id="ok">
+            <input type="button" value="Annuler" id="close">
         </div>
     </div>
     <section>
@@ -42,7 +42,7 @@
         <ul>
             <% for(i=0; i<data.length; i++){ %>
             <li><%= data[i].titre +" : "+data[i].description %></li>
-            <input type="button" value="supp'" onclick="deleteData('<%= data[i].id %>')">
+            <input type="button" value="supp" onclick='openModal("<%= data[i].id %>")'>
             <input type="button" value="modif'" onclick='putData("<%= data[i].id %>", "<%= data[i].titre %>", "<%= data[i].description %>")'>
             <!-- j'ai eu une erreur j'ai du echanger les " et les '. -->
             <% } %>
@@ -63,12 +63,22 @@
         .then(data => window.location.href = data.routeRacine)
         .catch(error =>console.error(error));
     }
-    function open() {
-        let popup = document.getElementById('popup').style.diplay = "block";
+
+    function openModal(id) {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('ok').addEventListener('click', ()=>{deleteData(id)})
     }
-    function close() {
-        // let popup = document.getElementById('popup').style.diplay = "none";
-        console.log('ok');
-    }
+
+    document.getElementById('close').addEventListener('click', ()=>{
+        document.getElementById('popup').style.display = 'none';
+    })
+
+// Fonctionne pas sur tous
+    // function open() {
+    //     let popup = document.getElementById('popup').style.diplay = "block";
+    // }
+    // function close() {
+    //     let popup = document.getElementById('popup').style.diplay = "none";
+    // }
 </script>
 </html>
