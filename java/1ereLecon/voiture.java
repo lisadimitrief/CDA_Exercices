@@ -5,4 +5,8 @@ public class Voiture{
     }
     public String mMarque;
     public String mCouleur;
+
+    public void afficherCouleur(){
+        System.out.println(this.Couleur);
+    }
 }

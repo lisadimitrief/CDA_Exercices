@@ -1,4 +1,5 @@
-public class Cat{
+public class Cat extends Animal{
+    
     private String mName;
     private int mAge;
     private boolean mVaccin;
