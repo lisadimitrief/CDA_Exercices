@@ -4,6 +4,7 @@ public class App {
         Chat Nova = new Chat("Nova", 1, false);
         
         presentation(Luna);
+        presentation(Nova);
     };
 
     public static void presentation(Chat Chat){

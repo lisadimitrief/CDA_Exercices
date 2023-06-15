@@ -41,13 +41,13 @@ public class Calcul {
     //         }
     // }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        int prix = Math.random()*1000;
-        Scanner scanner = new Scanner(System.in);
+        // // int prix = Math.random()*1000;
+        // Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Donne un chiffre : ");
-        int chiffre = scanner.nextInt();
+        // System.out.println("Donne un chiffre : ");
+        // int chiffre = scanner.nextInt();
 
-        test(chiffre, prix, scanner);
+        // // test(chiffre, prix, scanner);
 
         
     }
