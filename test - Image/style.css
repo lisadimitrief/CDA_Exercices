@@ -1,0 +1,25 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+    width: 30px;
+    height: auto;
+}
+div
+{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+}
+p
+{
+    font-size: 1.5em;
+    margin-right: 0.5em; 
+}
