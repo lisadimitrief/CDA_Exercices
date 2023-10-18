@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react';
 
-test('renders all input', () => { 
+test('renders   +*all input', () => { 
     const {getByTestID} = render(<Register />);
 
     expect(getByTestID('userName')).toBeInTheDocument()
